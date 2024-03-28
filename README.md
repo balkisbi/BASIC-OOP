@@ -67,12 +67,13 @@ Tambahkan metode segment_customers() yang mengelompokkan pelanggan berdasarkan k
             print("Segmenting Customers Based on Spending:")
             print(self.data)
 
-    def transform(self):
-        super().transform()
-        self.segment_customers()
+
 
 Demonstrasi polymorphism dengan meng-override metode transform() dalam TargetedMarketingETL untuk menambahkan logika segmentasi pelanggan ke dalam proses transformasi.
 
+    def transform(self):
+        super().transform()
+        self.segment_customers()
     def store_segmented_data(self, output_file_path):
         if self.data is not None:
             try:
